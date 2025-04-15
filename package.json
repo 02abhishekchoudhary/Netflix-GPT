@@ -1,0 +1,28 @@
+{
+  "name": "netflix_gpt",
+  "version": "1.0.0",
+  "description": "Netflix app with chat-gpt api integration",
+  "homepage": "https://github.com/02abhishekchoudhary/Netflix-GPT#readme",
+  "bugs": {
+    "url": "https://github.com/02abhishekchoudhary/Netflix-GPT/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/02abhishekchoudhary/Netflix-GPT.git"
+  },
+  "license": "ISC",
+  "author": "Abhishek Choudhary",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  }
+}
