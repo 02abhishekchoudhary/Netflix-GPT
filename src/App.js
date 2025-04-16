@@ -2,8 +2,8 @@ import ReactDOM from "react-dom/client";
 
 const AppLayout = () => {
   return (
-    <div className="app">
-      <h1>Hello World!</h1>
+    <div>
+      <h1 className="text-4xl text-red-500 font-bold">Hey It's me</h1>
     </div>
   );
 };
