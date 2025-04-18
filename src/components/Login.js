@@ -35,14 +35,14 @@ const Login = () => {
           />
           <input
             type="password"
-            placeholder="password"
+            placeholder="Password"
             className="p-2 m-2 w-full rounded bg-gray-700 text-white placeholder-gray-400"
           />
           <button className="p-2 mx-2 my-6 w-full bg-red-600 text-white rounded hover:bg-red-700">
             {isSignInForm ? "Sign In" : "Sign Up"}
           </button>
           <p className="text-white text-sm">
-            {isSignInForm ? "Already registered? " : "New To Netflix?"}
+            {isSignInForm ? "Already Registered? " : "New To Netflix?"}
             <span
               className="cursor-pointer hover:underline"
               onClick={toggleSignInForm}
