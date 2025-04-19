@@ -8,8 +8,11 @@
 - Login/signup page
 - Sign in / sign up page
 - Header
+- Routing of App
 - Login Form
 - Sign Up form
+- Form validation
+- useRef Hook
 
 - Browse (after authentication)
 
