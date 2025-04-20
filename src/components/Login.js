@@ -17,8 +17,6 @@ const Login = () => {
       name.current.value
     );
     setErrMessage(message);
-
-    // Sign in / sign up
   };
 
   const toggleSignInForm = () => {
