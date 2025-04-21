@@ -15,10 +15,12 @@
   "type": "commonjs",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "cross-env TEMP=D:\\temp TMP=D:\\temp parcel build index.html",
     "test": "jest"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
+    "firebase": "^11.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
