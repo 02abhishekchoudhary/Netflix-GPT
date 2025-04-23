@@ -18,6 +18,7 @@
 - Create signup user account
 - Implement signin user API
 - Created Redux Store with userSlice
+- Implemented Sign out
 
 - Browse (after authentication)
 
