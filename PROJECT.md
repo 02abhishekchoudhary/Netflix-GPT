@@ -19,6 +19,7 @@
 - Implement signin user API
 - Created Redux Store with userSlice
 - Implemented Sign out
+- Update profile
 
 - Browse (after authentication)
 
