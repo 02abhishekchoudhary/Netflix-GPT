@@ -20,6 +20,7 @@
 - Created Redux Store with userSlice
 - Implemented Sign out
 - Update profile
+- Browse page
 
 - Browse (after authentication)
 
