@@ -9,7 +9,7 @@ const ErrorPage = () => {
         alt="Netflix Logo"
       />
       <h1 className="text-6xl font-extrabold text-red-600 drop-shadow-lg mb-4">
-        404
+        404 : Page not found
       </h1>
       <p className="text-xl mb-6">
         Oops! The page you're looking for doesn't exist.
