@@ -46,7 +46,7 @@ const Header = () => {
         <div className="flex p-2 items-center gap-4">
           <img
             className="w-12 h-12 rounded-md"
-            src={user?.photoURL || { DEFAULT_USER_AVATAR }}
+            src={DEFAULT_USER_AVATAR}
             alt="Usericon"
           />
           <button
