@@ -3,3 +3,4 @@
 .parcel-cache
 .firebase
 src/utils/firebase.js
+.env
