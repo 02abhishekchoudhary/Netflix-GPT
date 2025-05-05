@@ -40,6 +40,7 @@
 - TMDB image CDN URL
 - Made the browse page amazing with tailwinf css
 - custom hooks for popular, trending and upcoming movies
+-
 
 - Browse (after authentication)
 
