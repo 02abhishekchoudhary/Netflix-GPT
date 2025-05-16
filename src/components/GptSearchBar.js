@@ -1,10 +1,13 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import lang from "../utils/languageConstants";
 import { useRef } from "react";
 import Openai from "../utils/openai";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { API_OPTIONS } from "../utils/constants";
+import { addGptMovieResult } from "../utils/gptSlice";
 
 const GptSearchBar = () => {
+  const dispatch = useDispatch();
   const langKey = useSelector((store) => store.config.lang);
   const searchText = useRef(null);
 
@@ -26,9 +29,18 @@ const GptSearchBar = () => {
   //   }
   // };
 
-  // Replace with your Gemini API key
-  const API_KEY = process.env.REACT_APP_GEMINI_KEY;
+  const searchMovieTMDB = async (movie) => {
+    const data = await fetch(
+      "https://api.themoviedb.org/3/search/movie?query=" +
+        movie +
+        "&include_adult=false&language=en-US&page=1",
+      API_OPTIONS
+    );
+    const json = await data.json();
+    return json.results;
+  };
 
+  const API_KEY = process.env.REACT_APP_GEMINI_KEY;
   const genAI = new GoogleGenerativeAI(API_KEY);
 
   const handleGptSearchClick = async () => {
@@ -45,8 +57,14 @@ const GptSearchBar = () => {
       const result = await model.generateContent(gptQuery);
       const response = result.response;
       const text = await response.text();
-
       console.log(text);
+      const gptMovies = text.split(",");
+      console.log(gptMovies);
+
+      const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
+      const tmdbResults = await Promise.all(promiseArray);
+      console.log(tmdbResults);
+      dispatch(addGptMovieResult(tmdbResults));
     } catch (error) {
       console.error("Gemini API error:", error.message);
     }
