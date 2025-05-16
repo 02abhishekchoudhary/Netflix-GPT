@@ -57,13 +57,9 @@ const GptSearchBar = () => {
       const result = await model.generateContent(gptQuery);
       const response = result.response;
       const text = await response.text();
-      console.log(text);
       const gptMovies = text.split(",");
-      console.log(gptMovies);
-
       const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
       const tmdbResults = await Promise.all(promiseArray);
-      console.log(tmdbResults);
       dispatch(
         addGptMovieResult({ movieNames: gptMovies, movieResults: tmdbResults })
       );
