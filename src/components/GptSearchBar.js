@@ -64,7 +64,9 @@ const GptSearchBar = () => {
       const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
       const tmdbResults = await Promise.all(promiseArray);
       console.log(tmdbResults);
-      dispatch(addGptMovieResult(tmdbResults));
+      dispatch(
+        addGptMovieResult({ movieNames: gptMovies, movieResults: tmdbResults })
+      );
     } catch (error) {
       console.error("Gemini API error:", error.message);
     }
