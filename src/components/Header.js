@@ -63,7 +63,7 @@ const Header = () => {
       />
       {user && (
         <div
-          className="flex p-2 items-center gap-4"
+          className="flex p-2 md:items-center md:gap-4 justify-between"
           onChange={handleLanguageChange}
         >
           {showGptSearch && (
@@ -82,7 +82,7 @@ const Header = () => {
             {showGptSearch ? "Homepage" : "GPT Search"}
           </button>
           <img
-            className="w-12 h-12 rounded-md"
+            className="hidden md:block w-12 h-12 rounded-md"
             src={DEFAULT_USER_AVATAR}
             alt="Usericon"
           />
