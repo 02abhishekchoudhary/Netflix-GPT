@@ -11,24 +11,6 @@ const GptSearchBar = () => {
   const langKey = useSelector((store) => store.config.lang);
   const searchText = useRef(null);
 
-  // const handleGptSearchClick = async () => {
-  //   console.log(searchText.current.value);
-  //   const gptQuery =
-  //     "Act as a movie Recommendation system and suggest some movies for the query : " +
-  //     searchText.current.value +
-  //     ". Only give me names of 5 movies. Comma seperated like the example results given ahead. Example result: Gadar, Dhol, Sholay, Don, Gangs Of Wasseypur";
-  //   try {
-  //     const gptResults = await Openai.chat.completions.create({
-  //       model: "gpt-3.5-turbo",
-  //       messages: [{ role: "user", content: gptQuery }],
-  //     });
-  //     console.log(gptResults);
-  //     console.log(gptResults.choices);
-  //   } catch (error) {
-  //     console.error("OpenAI API error:", error.message);
-  //   }
-  // };
-
   const searchMovieTMDB = async (movie) => {
     const data = await fetch(
       "https://api.themoviedb.org/3/search/movie?query=" +

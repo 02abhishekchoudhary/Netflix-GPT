@@ -43,7 +43,14 @@
 - GPT search page
 - GPT search bar
 - Multi lingual feature in GPT page
-- Integrate GPT APIS
+- Get GEMINI APIS
+- Gemini API call
+- Fetched gemini moviesSuggestions from TMDB
+- created gptSlice added data
+- Resused MovieList component to make movie suggestion conatiner
+- Memoization
+- Added .env file & added to gitignore
+- Made our app Responsive
 
 - Browse (after authentication)
 
