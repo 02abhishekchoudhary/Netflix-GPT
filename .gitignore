@@ -4,3 +4,4 @@
 .firebase
 src/utils/firebase.js
 .env
+.qodo
